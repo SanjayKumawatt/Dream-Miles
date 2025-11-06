@@ -153,7 +153,15 @@ const BookingPage = () => {
             </div>
           </form>
 
-          
+          {/* 🔙 Back to Home Button (Bottom Section) */}
+          <div className="sm:col-span-2 mt-6 text-center">
+            <Link
+              to="/"
+              className="inline-block bg-gray-200 text-gray-800 py-2 px-6 rounded-md font-medium hover:bg-gray-300 transition"
+            >
+              ← Back to Home
+            </Link>
+          </div>
         </div>
       </div>
     </div>

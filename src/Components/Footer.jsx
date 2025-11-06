@@ -8,17 +8,21 @@ import img3 from "../assets/Footer/img3.png";
 import img4 from "../assets/Footer/img4.png";
 import img5 from "../assets/Footer/img5.png";
 import img6 from "../assets/Footer/img6.png";
-
 import main from "../assets/Footer/main.png";
 
-// --- Static Data ---
+// Payment method icons
+import visa from "../assets/payment/img1.png";
+import ig2 from "../assets/payment/img2.avif";
+import ig3 from "../assets/payment/img3.avif";
+import ig4 from "../assets/payment/img4.webp";
+import ig5 from "../assets/payment/img5.avif";
+import ig6 from "../assets/payment/img6.avif";
+
 const companyInfo = {
   name: "DREAM MILES CONSULTANTS PRIVATE LIMITED",
   email: "booking@dream-miles.in",
-  address:
-    "Shop No. Fa - 152 Galaxy, Diamond Plaza, Greater, Gautam Buddha Nagar, Gautam Buddha Nagar, Uttar Pradesh, India, 201318",
-  shortAddress:
-    "Shop No. Fa - 152 Galaxy, Diamond Plaza, Greater, Gautam Buddha Nagar, Uttar Pradesh, India, 201318",
+  address: "Shop No. Fa-152 Galaxy, Diamond Plaza, Greater, Gautam Buddha Nagar, …",
+  shortAddress: "Shop No. Fa-152 Galaxy, Diamond Plaza, Greater, Gautam Buddha Nagar, …",
   copyrightRef: "Dream Miles",
 };
 
@@ -31,24 +35,16 @@ const quickLinks = [
   { name: "Contact", path: "/contact" },
 ];
 
-const imageGrid = [
-  img1,
-  img2,
-  img3,
-  img4,
-  img5,
-  img6,
-  
-];
+const imageGrid = [img1, img2, img3, img4, img5, img6];
 
-// --- Footer Component ---
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-gray-300">
-      {/* 1. TOP SECTION (3 Columns) */}
+      {/* Top Section */}
       <div className="bg-[#363636] py-10 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-8">
+
             {/* Column 1: Image Grid */}
             <div>
               <div className="grid grid-cols-3 gap-1">
@@ -72,11 +68,8 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link
                       to={link.path}
-                      className={`text-sm hover:text-white transition-colors ${
-                        link.name === "Home"
-                          ? "inline-block bg-[#ff6a30] px-4 py-1 rounded"
-                          : ""
-                      }`}
+                      className={`text-sm hover:text-white transition-colors ${link.name === "Home" ? "inline-block bg-[#ff6a30] px-4 py-1 rounded" : ""
+                        }`}
                     >
                       {link.name}
                     </Link>
@@ -89,29 +82,41 @@ const Footer = () => {
             <div className="relative text-right pl-6 border-l-2 border-[#ff6a30] min-h-[200px]">
               <h3 className="text-xl font-bold text-white mb-4">CONTACT</h3>
 
-              {/* Email */}
               <div className="flex justify-end items-center space-x-2 mb-2">
                 <p className="text-sm">{companyInfo.email}</p>
                 <Mail className="w-5 h-5 text-[#ff6a30]" />
               </div>
 
-              {/* 24/7 Hours */}
               <div className="flex justify-end items-center space-x-2 mb-4">
                 <p className="text-sm">24/7 hours</p>
                 <Clock className="w-5 h-5 text-[#ff6a30]" />
               </div>
 
-              {/* Address */}
               <div className="flex justify-end items-start space-x-2">
                 <p className="text-sm">{companyInfo.shortAddress}</p>
                 <MapPin className="w-5 h-5 text-[#ff6a30] flex-shrink-0 mt-1" />
               </div>
             </div>
+
           </div>
+
+          {/* Payment Methods Section */}
+          <div className="mt-10 border-t border-gray-700 pt-6 text-center">
+            <h4 className="text-white text-lg mb-4">We Accept</h4>
+            <div className="flex justify-center items-center space-x-6">
+              <img src={visa} alt="Visa" className="h-8 object-contain" />
+              <img src={ig2} alt="MasterCard" className="h-8 object-contain" />
+              <img src={ig3} alt="PayPal" className="h-8 object-contain" />
+              <img src={ig4} alt="UPI" className="h-8 object-contain" />
+              <img src={ig5} alt="UPI" className="h-8 object-contain" />
+              <img src={ig6} alt="UPI" className="h-8 object-contain" />
+            </div>
+          </div>
+
         </div>
       </div>
 
-      {/* 2. COPYRIGHT SECTION */}
+      {/* Copyright */}
       <div className="bg-gray-800 text-center py-4 border-t border-gray-700">
         <p className="text-sm text-gray-400">
           Copyright © 2025 {companyInfo.name} | Developed By:{" "}
@@ -121,7 +126,7 @@ const Footer = () => {
         </p>
       </div>
 
-      {/* 3. Skyline Image (Without WhatsApp Icon) */}
+      {/* Bottom Image */}
       <div className="relative h-58 md:h-96 bg-black overflow-hidden">
         <img
           src={main}

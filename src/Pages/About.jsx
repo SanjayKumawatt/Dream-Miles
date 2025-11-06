@@ -92,10 +92,9 @@ const AboutPage = () => {
                       </p>
                       <p className="text-sm font-medium text-gray-700 border-l-4 border-red-500 pl-3">
                           Registered Address: {companyAddress}
-                          <br/>Activity: {companyActivity}
                       </p>
                       <p>
-                          We are a reliable and certified Destination Tour Operator and Travel Agent in Jaipur. We are offering a wide range of custom tourism services. {companyName} is registered under the Ministry of Corporate Affairs, dedicated to fulfilling every client's travel dream within budget.
+                          We are a reliable and certified Destination Tour Operator and Travel Agent in Uttar Pradesh. We are offering a wide range of custom tourism services. {companyName} is registered under the Ministry of Corporate Affairs, dedicated to fulfilling every client's travel dream within budget.
                       </p>
                       
                   </div>
@@ -133,7 +132,7 @@ const AboutPage = () => {
           {/* --- SECTION 3: WHY CHOOSE US --- */}
           <div className="max-w-5xl mx-auto mt-20 text-center">
               <h3 className="text-3xl font-bold text-gray-700 mb-12">
-                  WHY CHOOSE JAIPUR SIGHTSEEING TRIP
+                  WHY CHOOSE Uttar Pradesh SIGHTSEEING TRIP
               </h3>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
